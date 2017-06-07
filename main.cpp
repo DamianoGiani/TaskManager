@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
     Home home;
 
     List Lavoro;
+    List Casa;
+    Casa.setName_list("Casa");
 
     Lavoro.setName_list("Lavoro");
     List Ufficio;
@@ -27,6 +29,7 @@ int main(int argc, char *argv[])
 
     home.addList("Lavoro");
     home.addList("Ufficio");
+    home.addList("Casa");
 
     Activity stampa;
     stampa.setName_activity("stampare");
