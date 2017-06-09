@@ -1,4 +1,3 @@
-
 #include "mainwindow.h"
 #include <QApplication>
 #include "Home.h"
@@ -21,22 +20,22 @@ int main(int argc, char *argv[])
 
     List Lavoro;
     List Casa;
-    Casa.setName_list("Casa");
+    Casa.setNameList("Casa");
 
-    Lavoro.setName_list("Lavoro");
+    Lavoro.setNameList("Lavoro");
     List Ufficio;
-    Ufficio.setName_list("Ufficio");
+    Ufficio.setNameList("Ufficio");
 
     home.addList("Lavoro");
     home.addList("Ufficio");
     home.addList("Casa");
 
     Activity stampa;
-    stampa.setName_activity("stampare");
+    stampa.setNameActivity("stampare");
     Activity penna;
-    stampa.setName_activity("penna");
+    stampa.setNameActivity("penna");
     Activity ara;
-    stampa.setName_activity("ara");
+    stampa.setNameActivity("ara");
 
     home.searchList("Lavoro")->addActivity("ara");
     home.searchList("Lavoro")->addActivity("stampare");
@@ -46,3 +45,4 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+

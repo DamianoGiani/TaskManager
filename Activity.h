@@ -1,6 +1,6 @@
 #ifndef ACTIVITY_H
 #define ACTIVITY_H
-#include "Person.h"
+#include <Person.h>
 #include <vector>
 #include <string>
 #include <Date.h>
@@ -10,23 +10,22 @@ class Activity
 {
 public:
 
-    vector<Sub_Activity> Sub_Activities;
-    vector<Person> Person_incl;
+
     Activity();
     ~Activity();
 
 
-    void addPerson_incl(string);
-    void removePerson_incl(string);
-    void add_subActivity(string);
-    void delete_subActivity(string);
+    void addPerson(string);
+    void removePerson(string);
+    void addSubActivity(string);
+    void deleteSubActivity(string);
 
 
-    string getDescriprion() const;
-    void setDescriprion(const string &value);
+    string getDescription() const;
+    void setDescription(const string &value);
 
-    string getName_activity() const;
-    void setName_activity(const string &value);
+    string getNameActivity() const;
+    void setNameActivity(const string &value);
 
     bool getComplete() const;
     void setComplete(bool value);
@@ -40,9 +39,11 @@ public:
 private:
     bool important;
     bool complete;
-    string descriprion;
+    string description;
     Date expiration;
-    string name_activity;
+    string nameActivity;
+    vector<Sub_Activity> subActivities;
+    vector<Person> personIncl;
 
 };
 

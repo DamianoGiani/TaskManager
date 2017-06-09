@@ -23,7 +23,7 @@ public:
 
 
 private:
-    string name_subActivity;
+    string nameSubActivity;
 
 };
 

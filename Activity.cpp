@@ -14,44 +14,44 @@ Activity::~Activity()
 
 
 
-void Activity::addPerson_incl(string name)
+void Activity::addPerson(string name)
 {
     Person new_person;
     new_person.setName(name);
-    Person_incl.push_back(new_person);
+    personIncl.push_back(new_person);
 }
 
-void Activity::removePerson_incl(string name)
+void Activity::removePerson(string name)
 {
     vector<Person>::iterator i;
-    for(i=Person_incl.begin();i!=Person_incl.end();i++){
+    for(i=personIncl.begin();i!=personIncl.end();i++){
         if (name==i->getName()){
-            Person_incl.erase(Person_incl.begin()+(i-Person_incl.begin()));
-                    return;
+            personIncl.erase(personIncl.begin()+(i-personIncl.begin()));
+            return;
         }
     }
 }
 
 
 
-string Activity::getDescriprion() const
+string Activity::getDescription() const
 {
-    return descriprion;
+    return description;
 }
 
-void Activity::setDescriprion(const string &value)
+void Activity::setDescription(const string &value)
 {
-    descriprion = value;
+    description = value;
 }
 
-string Activity::getName_activity() const
+string Activity::getNameActivity() const
 {
-    return name_activity;
+    return nameActivity;
 }
 
-void Activity::setName_activity(const string &value)
+void Activity::setNameActivity(const string &value)
 {
-    name_activity = value;
+    nameActivity = value;
 }
 
 bool Activity::getComplete() const
@@ -85,21 +85,21 @@ void Activity::setExpiration(int d, int m, int y)
     return;
 }
 
-void Activity::add_subActivity(string name)
+void Activity::addSubActivity(string name)
 {
     Sub_Activity new_SubAct;
     new_SubAct.setName_subActivity(name);
-    Sub_Activities.push_back(new_SubAct);
+    subActivities.push_back(new_SubAct);
 
 }
 
-void Activity::delete_subActivity(string name)
+void Activity::deleteSubActivity(string name)
 {
     vector<Sub_Activity>::iterator i;
 
-    for(i= Sub_Activities.begin(); i!= Sub_Activities.end(); i++){
+    for(i= subActivities.begin(); i!= subActivities.end(); i++){
         if(name==i->getName_subActivity()){
-            Sub_Activities.erase(Sub_Activities.begin()-(i-Sub_Activities.begin()));
+            subActivities.erase(subActivities.begin()-(i-subActivities.begin()));
             return;
         }
     }
